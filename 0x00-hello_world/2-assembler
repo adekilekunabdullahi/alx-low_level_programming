@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -fverbose-asm -g -O2 $CFILE -o main.s
+gcc -S -o main.s $CFILE
