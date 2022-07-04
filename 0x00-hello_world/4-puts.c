@@ -7,6 +7,6 @@
 int main(void)
 {
 	puts("\"programming is like building a multilingual puzzle");
-        fprintf(stderr, "%s", "Stack");
+	fprintf(stderr, "%s", "");
 	return (0);
 }
