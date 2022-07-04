@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
  *main - Entry point
  *
@@ -6,7 +7,8 @@
  */
 int main(void)
 {
-	puts("\"programming is like building a multilingual puzzle");
-	fprintf(stderr, "%s", "");
+	char str1[52];
+	strcpy(str1, "\"programming is like building a multilingual puzzle");
+	puts(str1);
 	return (0);
 }
