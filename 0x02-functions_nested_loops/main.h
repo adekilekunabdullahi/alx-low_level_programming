@@ -1,6 +1,6 @@
 
 /*prototype of _putchar function*/
-int _putchar(char c)
+int _putchar(int c)
 {
 	return(fwrite(1,&c,1));
 }
