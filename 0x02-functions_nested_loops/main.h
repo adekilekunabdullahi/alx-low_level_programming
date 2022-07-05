@@ -1,6 +1,6 @@
 
 /*prototype of _putchar function*/
-int _putchar(int c)
+int house(int c)
 {
 	return(write(1,&c,1));
 }
