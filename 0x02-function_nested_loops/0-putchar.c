@@ -4,7 +4,7 @@
  *
  *Return: Always 0 (success)
  */
-int _putchar(char c)
+int main()
 {
 	return (0);
 }
