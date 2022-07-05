@@ -1,6 +1,7 @@
 
 /*prototype of _putchar function*/
-int _putchar(int c)
+#include <unistd.h>
+int _putchar(char c)
 {
 	return(write(1,&c,1));
 }
