@@ -1,23 +1,20 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - check the code
+ * islower - check the code
  *
  * Return: Always 0.
+ * @c: parameter passed
  */
-int main(void)
+
+int islower(int c)
 {
-/* function islower - function*/
-	int islower(int c)
+	if (c >= 97 && c <= 122)
 	{
-		if (islower(c))
-		{
-			return (1);
-		}
-		else
-		{
-			return (0);
-		}
+		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
