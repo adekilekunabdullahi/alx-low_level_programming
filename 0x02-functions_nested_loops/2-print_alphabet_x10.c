@@ -7,19 +7,22 @@
  */
 int main(void)
 {
-	int x = 0;
-
-	while (x < 10)
+	void print_alphabet_x10(void)
 	{
-		int j = 'a';
+		int x = 0;
 
-		while (j <= 'z')
+		while (x < 10)
 		{
-			_putchar(j);
-			j++;
+			int j = 'a';
+
+			while (j <= 'z')
+			{
+				_putchar(j);
+				j++;
+			}
+			_putchar('\n');
+			x++;
 		}
-		_putchar('\n');
-		x++;
 	}
 	return (0);
 }

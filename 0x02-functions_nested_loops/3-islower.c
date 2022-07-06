@@ -7,13 +7,16 @@
  */
 int main(void)
 {
-	void print_alphabet(void);
+/* function islower - function*/
+	int islower(int c)
 	{
-		char q;
-
-		for (q = 'a'; q <= 'z'; q++)
+		if (islower(c))
 		{
-			_putchar(q);
+			return (1);
+		}
+		else
+		{
+			return (0);
 		}
 	}
 	return (0);
