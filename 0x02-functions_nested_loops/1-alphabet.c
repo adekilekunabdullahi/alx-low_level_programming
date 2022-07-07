@@ -6,7 +6,7 @@
  * Return: empty
  */
 
-void print_alphabet(void);
+void print_alphabet(void)
 {
 	char q;
 
