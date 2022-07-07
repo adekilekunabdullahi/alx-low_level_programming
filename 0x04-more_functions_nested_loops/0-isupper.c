@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * _isupper - function
@@ -16,3 +15,4 @@ int _isupper(int c)
 		return (0);
 	}
 }
+
