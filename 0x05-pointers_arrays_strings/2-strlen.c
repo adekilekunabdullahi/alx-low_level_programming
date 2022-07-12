@@ -3,10 +3,13 @@
 #include <string.h>
 /**
  * _strlen - a function
- * @s: a manner
+ * @s: a manne
+ * Return: zero
  */
 int _strlen(char *s)
 {
-	int y = strlen(s);
-	return y;
+	int y;
+
+	y = strlen(s);
+	return (y);
 }
