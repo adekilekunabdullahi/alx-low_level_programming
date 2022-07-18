@@ -9,7 +9,6 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	char school[n];
-	s = &school;
 	memset(s, b, n);
+	return (s);
 }
