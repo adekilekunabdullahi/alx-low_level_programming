@@ -9,7 +9,8 @@ int main(void)
 {
 	char s[54];
 
-	strcpy(s, "\"programming is like building a multilingual puzzle\n");
+	strcpy(s, "\"programming is like building a multilingual puzzle");
 	puts(s);
+        putchar("\n");
 	return (0);
 }
