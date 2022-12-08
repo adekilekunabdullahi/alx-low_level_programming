@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -S -o 
+gcc $CFILE -S -o 100-main.s
