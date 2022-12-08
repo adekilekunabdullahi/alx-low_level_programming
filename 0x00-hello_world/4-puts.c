@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-        char s[];
+        char s[52];
 
         strcpy(s, "\"programming is like building a multilingual puzzle");
 	puts(s);
