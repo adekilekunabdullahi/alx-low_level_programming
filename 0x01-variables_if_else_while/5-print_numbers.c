@@ -1,5 +1,10 @@
 #include <stdio.h>
-int main()
+/**
+ *main - Entry point
+ *
+ *Return: Always 0 (success)
+ */
+int main(void)
 {
 	char b = '0';
 
