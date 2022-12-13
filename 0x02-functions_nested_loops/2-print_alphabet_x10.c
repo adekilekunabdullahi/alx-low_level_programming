@@ -5,24 +5,20 @@
  *
  * Return: Always 0.
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	void print_alphabet_x10(void)
+	int x = 0;
+
+	char j = 'a';
+
+	while (x < 10)
 	{
-		int x = 0;
-
-		while (x < 10)
+		while (j <= 'z')
 		{
-			int j = 'a';
-
-			while (j <= 'z')
-			{
-				_putchar(j);
-				j++;
-			}
-			_putchar('\n');
-			x++;
+			_putchar(j);
+			j++;
 		}
+		_putchar('\n');
+		x++;
 	}
-	return (0);
 }
