@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "_putchar.c"
 /**
  * _isalpha - a function
  * Return: Always 0
