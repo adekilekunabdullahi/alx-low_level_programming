@@ -1,10 +1,10 @@
 #include "main.h"
-/*
- * abss -  a function that prints the absolute value
+/**
+ * _abs -  a function that prints the absolute value
  * @a: parameter to print its absolute value
  * Return: a
  */
-int _abss(int a)
+int _abs(int a)
 {
 	if (a < 0)
 	{
