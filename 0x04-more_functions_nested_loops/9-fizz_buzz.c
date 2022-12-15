@@ -18,7 +18,8 @@ int main(void)
 				printf("%s", "Buzz");
 			else
 				printf("%d", a);
-		printf("%c", ' ');
+		if (a < 100)
+			printf("%c", ' ');
 	}
 	putchar('\n');
 	return (0);
