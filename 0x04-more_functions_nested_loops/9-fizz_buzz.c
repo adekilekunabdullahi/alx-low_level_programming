@@ -21,5 +21,6 @@ int main(void)
 				printf("%d", a);
 		printf("%c", ' ');
 	}
+	putchar('\n');
 	return (0);
 }
