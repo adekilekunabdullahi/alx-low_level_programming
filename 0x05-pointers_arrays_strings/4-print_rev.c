@@ -7,25 +7,29 @@
  */
 void print_rev(char *s)
 {
-	int a, len, c,  b;
+	int l, i;
 
-	len = strlen(s);
-	c = len - 1;
-	for (a = 0; a < len - 1; a++)
-	{
-		b = s[a];
-		s[a] = s[len -1];
-		s[len - 1] = b;
-		c--;
-		_putchar(b);
-	}
+	char *begin_ptr, *end_ptr, ch;
 
+	l = strlen(s);
+	begin_ptr = s;
+	end_ptr = s;
+	for (i = 0; i < l - 1; i++)
+		end_ptr++;
+	for (i = 0; i < l / 2; i++) {
+		ch = *end_ptr;
+	 	*end_ptr = *begin_ptr;
+	 	*begin_ptr = ch;
+		begin_ptr++;
+	 	end_ptr--;
+ 	}
 }
 int main(void)
 {
-	char *str;
+	    char *str;
 
-	    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	        print_rev(str);
-		    return (0);
+	        str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+		    print_rev(str);
+		        return (0);
 }
+
