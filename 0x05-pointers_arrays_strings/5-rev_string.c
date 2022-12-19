@@ -9,7 +9,7 @@ void rev_string(char *s)
 {
 	int a, i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	i = strlen(s);
 	for (a = i - 1; a >= 0; a--)
 		_putchar(s[a]);
 }
