@@ -23,5 +23,6 @@ void print_rev(char *s)
 		begin_ptr++;
 	 	end_ptr--;
  	}
+        printf("%s",s);
 }
 
