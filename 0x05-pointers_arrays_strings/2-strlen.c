@@ -10,6 +10,8 @@ int _strlen(char *s)
 {
 	unsigned int y;
 
-	for (y = 0; s[y] != '\0'; ++y){}
+	for (y = 0; s[y] != '\0'; ++y)
+	{
+	}
 	return (y);
 }
