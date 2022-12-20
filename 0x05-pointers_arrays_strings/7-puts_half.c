@@ -6,28 +6,21 @@
  */
 void puts_half(char *str)
 {
-	size_t len, i, j, mid, a;
-
-	char right[250];
+	size_t len, i, j, mid;
 
 	len = strlen(str);
 	mid = len / 2;
 	if (len % 2 == 0)
 	{
-		for (i = mid; a = 0;  i <= len; i++, a++)
-		{
-			right[a] = str[i];
-			_putchar(right[a]);
-		}
+		for (i = mid; i < len; i++)
+			_putchar(str[i]);
+		_putchar('\n');
 	}
 	else
 	{
-		j = (len - 1) / 2;
-		for (i = j; a = 0; i <= len; i++, a++)
-		{
-			right[a] = str[i];
-			_putchar(right[a]);;
-		}
+		j = (len + 1) / 2;
+		for (i = j; i < len; i++)
+			_putchar(str[i]);
+		_putchar('\n');
 	}
-	/*_putchar('\n');*/
 }
