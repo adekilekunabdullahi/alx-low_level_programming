@@ -6,7 +6,7 @@
  * @n: values to copy
  * Return: copied strings
  */
-char *_strncpy(char *dest, const char *src, size_t n)
+char *_strncpy(char *dest, char *src, size_t n)
 {
 	size_t i;
 
