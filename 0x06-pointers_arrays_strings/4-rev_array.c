@@ -8,13 +8,20 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i, j;
 
-	for (i = n - 1; i >= 0; i--)
+	int tmp, *start, *end;
+
+	start = a;
+	end = a;
+	for (i = 0; i < n - 1; i++)
+		end++;
+	for (j = 0; j < n / 2; j++)
 	{
-		if (i != n - 1)
-		       printf(", ");
-		 printf("%d%s", a[i]);
+		tmp = *end;
+		*end = *start;
+		*start = tmp;
+		start++;
+		end--;
 	}
-	printf("\n");
 }
