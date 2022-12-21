@@ -18,6 +18,6 @@ int _strcmp(char *s1, char *s2)
 	}
 	while (a == b)
 	{
-	}
+	};
 	return (a - b);
 }
