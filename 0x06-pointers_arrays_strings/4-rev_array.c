@@ -14,7 +14,7 @@ void reverse_array(int *a, int n)
 	{
 		if (i != n - 1)
 		       printf(", ");
-		 printf("%d%s", a[i]);
+		 printf("%d", a[i]);
 	}
 	printf("\n");
 }
