@@ -18,7 +18,25 @@ char *cap_string(char *n)
 				continue;
 			}
 		}
-		if (n[i] == ' ' || ';' || ',' || '\n' || '\t' || '.' || ')')
+		if (n[i] == ' ' || n[i] == '.')
+		{
+			++i;
+			if (n[i] >= 'a' && n[i] <= 'z')
+			{
+				n[i] -= 32;
+				continue;
+			}
+		}
+		if (n[i] == '\n')
+		{
+			++i;
+			if (n[i] >= 'a' && n[i] <= 'z')
+			{
+				n[i] -= 32;
+				continue;
+			}
+		}
+		if (n[i] == '\t')
 		{
 			++i;
 			if (n[i] >= 'a' && n[i] <= 'z')
