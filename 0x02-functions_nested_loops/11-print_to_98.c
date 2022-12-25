@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_to_98 - a function
+ * print_to_98 - a function that prints all natural numbers from n to 98,
+ * followed by a new line
  * @n: a parameter
  */
 void print_to_98(int n)
@@ -12,20 +13,16 @@ void print_to_98(int n)
 	{
 		for (i = n; i >= 98; i--)
 		{
-			printf("%d%s", i > 98 ? ',':'');
-
+			printf("%d%s", i, i > 98 ? ", " : "");
 		}
+		puts("");
 	}
-	else if (n < 98)
+	else
 	{
 		for (i = n; i <= 98; i++)
 		{
-			printf("%d", i);
-			if (i < 98)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			printf("%d%s", i, i < 98 ? ", " : "");
 		}
+		puts("");
 	}
 }
