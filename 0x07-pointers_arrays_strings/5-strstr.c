@@ -30,7 +30,7 @@ char *_strstr(char *X, char *Y)
 {
 	while (*X != '\0')
 	{
-		if ((*X == *Y) && compare(X, Y))
+		if (*X == *Y)
 		{
 			return (X);
 		}
