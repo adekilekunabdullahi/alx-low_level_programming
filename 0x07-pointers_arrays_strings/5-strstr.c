@@ -1,40 +1,41 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *compare - a function that compares two strings
- *@X: String 1
- *@Y: String 2
+ *_strstr - a function that compares two strings
+ *@heystack: String 1
+ *@needle: String 2
  *Return: searched strings.
  */
-int compare(const char *X, const char *Y)
+char *_strstr(char *heystack, char *needle)
 {
-	while (*X && *Y)
+	int i, j;
+
+	int flag = 0;
+
+	if ((heystack == NULL || needle == NULL))
+		return (NULL);
+	for (i = 0; heystack[i] != '\0'; i++)
 	{
-		if (*X != *Y)
+		if (heystack[i] == needle[0])
 		{
-			return (0);
+			for (j = i; ; j++)
+			{
+				if (needle[j - i] == '\0')
+				{
+					flag = 1;
+					break;
+				}
+				if (heystack[j] == needle[j - i])
+					continue;
+				else
+					break;
+			}
 		}
-		X++;
-		Y++;
+		if (flag == 1)
+			break;
 	}
-	return (*Y == '\0');
-}
-/**
- *_strstr - a function that locates a substring
- *compare - a function that compares two strings
- *@X: String 1
- *@Y: String 2
- *Return: searched strings.
- */
-char *_strstr(char *X, char *Y)
-{
-	while (*X != '\0')
-	{
-		if (*X == *Y)
-		{
-			return (X);
-		}
-		X++;
-	}
-	return (NULL);
+	if (flag)
+		return (heystack + i);
+	else
+		return (NULL);
 }
