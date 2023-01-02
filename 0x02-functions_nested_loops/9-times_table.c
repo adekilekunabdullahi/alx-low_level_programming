@@ -19,8 +19,3 @@ void times_table(void)
 	}
 	puts("");;
 }
-int main(void)
-{
-	times_table();
-	return (0);
-}
