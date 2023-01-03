@@ -16,7 +16,6 @@ void more_numbers(void)
 		{
 			printf("%d", a);
 		}
-		_putchar('\n');
+		printf("\n");
 	}
-	_putchar('\n');
 }
