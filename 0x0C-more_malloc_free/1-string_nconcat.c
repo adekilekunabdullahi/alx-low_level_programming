@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (j = 0; s2[j]; j++)
 			;
 	}
-	if (n >= j)
+	if (n > j)
 	{
 		j = n;
 		c = i + j;
@@ -41,6 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		array[a] = s1[a];
 	for (b = 0; b < c - i; b++)
 		array[b + i] = s2[b];
+	array[c] = '\0';
 	return (array);
 }
 
