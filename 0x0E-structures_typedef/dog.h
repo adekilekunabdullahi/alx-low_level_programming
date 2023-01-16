@@ -1,4 +1,5 @@
 #ifndef dogs
+#include "main.h"
 #define dogs
 /**
  *struct dog - a structure
