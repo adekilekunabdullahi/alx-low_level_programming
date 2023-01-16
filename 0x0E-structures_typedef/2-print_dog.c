@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "dog.h"
-#include "main.h"
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
