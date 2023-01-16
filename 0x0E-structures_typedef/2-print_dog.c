@@ -1,4 +1,9 @@
 #include "dog.h"
+#include <stdio.h>
+/**
+ *print_dog - a function
+ *@d: a parameter
+ */
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
