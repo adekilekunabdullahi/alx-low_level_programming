@@ -29,11 +29,11 @@ int _strlen(const char *str)
 
 char *_strcopy(char *dest, char *src)
 {
-	int j;
+	int i;
 
-	for (j = 0; src[j]; j++)
+	for (i = 0; src[i]; i++)
 		dest[i] = src[i];
-	dest[j] = '\0';
+	dest[i] = '\0';
 
 	return (dest);
 }
