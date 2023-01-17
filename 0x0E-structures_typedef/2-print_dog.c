@@ -6,7 +6,7 @@
  */
 void print_dog(struct dog *d)
 {
-	if (!d)
+	if (d)
 	{
 		printf("Name: %s\n", &d->name == NULL ? "(nil)\n" : d->name);
 		if (&d->age == NULL)
