@@ -1,4 +1,3 @@
-#include <stdarg.h>
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
@@ -19,13 +18,12 @@ void print_s(char *separator, va_list p)
 {
 	char *str = va_arg(p, char *);
 
-	if (str)
-		printf("%s%s", separator, str);
-	else
+	if (!str)
 	{
 		printf("%s%s", separator, "(nil)");
 		return;
 	}
+	printf("%s%s", separator, str);
 }
 /**
  *print_i - Prints an integer
