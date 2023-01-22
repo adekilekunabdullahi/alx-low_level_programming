@@ -22,7 +22,10 @@ void print_s(char *separator, va_list p)
 	if (str)
 		printf("%s%s", separator, str);
 	else
+	{
 		printf("%s%s", separator, "(nil)");
+		return;
+	}
 }
 /**
  *print_i - Prints an integer
