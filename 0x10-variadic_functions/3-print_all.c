@@ -4,20 +4,20 @@
 /**
  *print_c - Prints a character of char type
  *@separator: The separator of the character
- *@ch: A list of variadic arguments
+ *@p: A list of variadic arguments
  */
-void print_c(char *separator, va_list ch)
+void print_c(char *separator, va_list p)
 {
-	printf("%s%c", separator, va_arg(ch, int));
+	printf("%s%c", separator, va_arg(p, int));
 }
 /**
  *print_s - Prints a strings
  *@separator: The separator of the character
- *@s: A list of variadic arguments
+ *@p: A list of variadic arguments
  */
-void print_s(char *separator, va_list s)
+void print_s(char *separator, va_list p)
 {
-	char *str = va_arg(s, char *);
+	char *str = va_arg(p, char *);
 
 	if (str)
 		printf("%s%s", separator, str);
@@ -27,20 +27,20 @@ void print_s(char *separator, va_list s)
 /**
  *print_i - Prints an integer
  *@separator: The separator of the character
- *@i: A list of variadic arguments
+ *@p: A list of variadic arguments
  */
-void print_i(char *separator, va_list i)
+void print_i(char *separator, va_list p)
 {
-	printf("%s%d", separator, va_arg(i, int));
+	printf("%s%d", separator, va_arg(p, int));
 }
 /**
  *print_f - Prints a float
  *@separator: The separator of the character
- *@f: A list of variadic arguments
+ *@p: A list of variadic arguments
  */
-void print_f(char *separator, va_list f)
+void print_f(char *separator, va_list p)
 {
-	printf("%s%f", separator, va_arg(f, double));
+	printf("%s%f", separator, va_arg(p, double));
 }
 /**
   * print_all - Prints anything
