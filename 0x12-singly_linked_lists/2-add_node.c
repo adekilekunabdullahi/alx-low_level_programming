@@ -24,6 +24,7 @@ list_t *add_node(list_t **head, const char *str)
 		*head = tmp;
 		return (tmp);
 	}
+	return (0);
 }
 /**
  * _strlen - a function that finds the length of the string
