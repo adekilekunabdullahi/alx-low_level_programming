@@ -42,7 +42,7 @@ list_t *add_node_end(list_t **head, const char *str)
  */
 int _strlen(const char *a)
 {
-	size_t i;
+	unsigned int i;
 
 	for (i = 0; a[i] != '\0'; i++)
 		;
