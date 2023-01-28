@@ -12,19 +12,18 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *tmp;
 
-	if (head && str)
-	{
-		tmp = malloc(sizeof(list_t));
-		if (!tmp)
-			return (NULL);
-		tmp->str = strdup(str);
-		tmp->len = _strlen(str);
+	tmp = malloc(sizeof(list_t));
+	if (!tmp)
+		return (NULL);
+	if (head)
 		tmp->next = *head;
+	else
+		tmp->next = NULL;
+	tmp->str = strdup(str);
+	tmp->len = _strlen(str);
 
-		*head = tmp;
-		return (tmp);
-	}
-	return (0);
+	*head = tmp;
+	return (tmp);	
 }
 /**
  * _strlen - a function that finds the length of the string
