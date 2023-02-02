@@ -19,8 +19,10 @@ int isNthBitSet(unsigned long int data, unsigned int pos)
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int a;
+	unsigned int a = 0;
 
+	if (n == NULL)
+		return (-1);
 	*n &= ~(1 << index);
 	a = isNthBitSet(*n, index);
 	if (!a)
