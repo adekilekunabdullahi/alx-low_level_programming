@@ -7,19 +7,10 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int array[32];
-	int i = 0;
-	unsigned int a;
+	int bit;
 
-	if (n == 0)
-		return (0);
-	for (; n > 0; )
-	{
-		array[i++] = n % 2;
-		n /= 2;
-		a++;
-	}
-	if (index > a)
-		return (-1);
-	return (array[index]);
+	bit = (n >> index) & 1;
+	if (bit == 1 || bit == 0)
+		return (bit);
+	return (-1);
 }
