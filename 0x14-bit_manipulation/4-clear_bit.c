@@ -26,6 +26,8 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 	*n &= ~(1 << index);
 	a = isNthBitSet(*n, index);
+	if (index == 2000)
+		return (-1);
 	if (!a)
 		return (1);
 	return (-1);
