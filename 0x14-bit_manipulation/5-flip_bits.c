@@ -4,14 +4,15 @@
  * @a: number
  * Return: number of set bits
  */
-int countSetBits(int a)
+unsigned long int countSetBits(int a)
 {
-	int count = 0;
+	unsigned long int count = 0;
 
-	while (a > 0)
+	while (a)
 	{
-		count++;
-		a &= (a - 1);
+		if (a & 1)
+			count++;
+		a >>= 1;
 	}
 	return (count);
 }
@@ -25,7 +26,5 @@ int countSetBits(int a)
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	if (!n || !m)
-		return (0);
 	return (countSetBits(n ^ m));
 }
