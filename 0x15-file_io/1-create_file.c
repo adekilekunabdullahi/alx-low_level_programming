@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <fcntl.h>
+int _strlen(char *s);
 /**
  * create_file - function that creates a file.
  * @text_content: is a NULL terminated string to write to the file
@@ -9,13 +10,9 @@
 int create_file(const char *filename, char *text_content)
 {
 	int file, b;
-	unsigned int a = 0;
+
 	if (!filename)
 		return (-1);
-	while (text_content[a])
-	{
-		a++;
-	}
 	if (!text_content)
 	{
 
@@ -23,15 +20,27 @@ int create_file(const char *filename, char *text_content)
 		if (file == -1)
 			return (-1);
 	}
-	else
-	{
-		file = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-		if (file == -1)
-			return (-1);
-		b = write(file, text_content, a);
-		if (b == -1)
-			return (-1);
-	}
+	file = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (file == -1)
+		return (-1);
+	b = write(file, text_content, _strlen(text_content));
+	if (b == -1)
+		return (-1);
 	close(file);
 	return (1);
+}
+/**
+ * _strlen - function to calculate the length of a string
+ *@s: string.
+ *Return: length of the string.
+ */
+int _strlen(char *s)
+{
+	int a = 0;
+
+	while (s[a])
+	{
+		a++;
+	}
+	return (a);
 }
