@@ -8,8 +8,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int file, a = 0, b;
-
+	int file, b;
+	unsigned int a = 0;
 	if (!filename)
 		return (-1);
 	while (text_content[a])
@@ -19,13 +19,13 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 	{
 
-		file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+		file = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 		if (file == -1)
 			return (-1);
 	}
 	else
 	{
-		file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+		file = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 		if (file == -1)
 			return (-1);
 		b = write(file, text_content, a);
