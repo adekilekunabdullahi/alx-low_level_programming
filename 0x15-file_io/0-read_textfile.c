@@ -13,20 +13,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd, ab, bc;
 	char *text;
 
-	text = malloc(sizeof(char) * letters);
 	if (!filename)
 		return (0);
+	text = malloc(sizeof(char) * letters);
 	if (!text)
 		return (0);
-	fd = open(filename, O_RDONLY);
+	fd = open(filename, O_RDWR, 0600);
 	if (fd == -1)
 		return (0);
 	ab = read(fd, text, letters);
-	if (ab < 0)
+	if (ab == -1)
 		return (0);
-	text[ab] = '\0';
 	bc = write(STDIN_FILENO, text, ab);
-	if (bc < 0)
+	if (bc == -1)
 		return (0);
 	free(text);
 	close(fd);
