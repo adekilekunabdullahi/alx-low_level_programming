@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <fcntl.h>
+int _strlen(char *s);
 /**
  * append_text_to_file - a function that appends text at the end of a file.
  * @filename: is the name of the file.
