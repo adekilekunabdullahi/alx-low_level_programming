@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		exit(97);
-		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	}
 	copy_string(argv[1], argv[2]);
 	return (0);
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
  */
 void copy_string(const char *file_from, const char *file_to)
 {
-	char *ptr;
+	char ptr[1024];
 	int cd, fd, fd1;
 
 	fd = open(file_from, O_RDONLY);
@@ -35,7 +35,6 @@ void copy_string(const char *file_from, const char *file_to)
 		exit(98);
 		dprintf(STDERR_FILENO, "%s %s\n", "Error: Can't read from file", file_from);
 	}
-	ptr = malloc(sizeof(char *) * 1024);
 	fd1 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while ((cd = read(fd, ptr, 1024)) > 0)
 	{
@@ -56,5 +55,4 @@ void copy_string(const char *file_from, const char *file_to)
 		exit(100);
 		dprintf(STDERR_FILENO, "%s %d\n", "Can't close fd", fd1);
 	}
-	free(ptr);
 }
