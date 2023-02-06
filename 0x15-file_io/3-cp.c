@@ -33,7 +33,7 @@ void copy_string(const char *file_from, const char *file_to)
 	if (fd == -1 || access(file_from, F_OK) != 0)
 	{
 		exit(98);
-		dprintf(STDERR_FILENO, "%s %s\n", "Error: Can't read from file", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 	}
 	fd1 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while ((cd = read(fd, ptr, 1024)) > 0)
@@ -41,18 +41,22 @@ void copy_string(const char *file_from, const char *file_to)
 		if (fd1 == -1 || write(fd1, ptr, cd) != cd)
 		{
 			exit(99);
-			dprintf(STDERR_FILENO, "%s %s\n", "Can't write to", file_to);
+			dprintf(STDERR_FILENO, "Can't write to %s\n", file_to);
 		}
 	}
-
+	if (cd == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
 	if (close(fd) == -1)
 	{
 		exit(100);
-		dprintf(STDERR_FILENO, "%s %d\n", "Can't close fd", fd);
+		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd);
 	}
 	if (close(fd1) == -1)
 	{
 		exit(100);
-		dprintf(STDERR_FILENO, "%s %d\n", "Can't close fd", fd1);
+		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd1);
 	}
 }
