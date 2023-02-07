@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 	copy_string(argv[1], argv[2]);
-	return (0);
+	exit(0);
 }
 /**
  * copy_string - ...
