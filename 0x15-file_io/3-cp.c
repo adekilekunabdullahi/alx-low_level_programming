@@ -40,7 +40,7 @@ void copy_string(const char *file_from, const char *file_to)
 	{
 		if (fd1 == -1 || write(fd1, ptr, cd) != cd)
 		{
-			dprintf(STDERR_FILENO, "Can't write to %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	}
@@ -51,12 +51,12 @@ void copy_string(const char *file_from, const char *file_to)
 	}
 	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	if (close(fd1) == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
 }
