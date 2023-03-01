@@ -1,4 +1,4 @@
-#include <stdio.h> // for printf
+#include <stdio.h> /* for printf */
 /**
  * main - function to print out the sizes of various data types in c
  * Return: success (0)
