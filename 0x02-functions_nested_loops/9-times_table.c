@@ -11,14 +11,23 @@ void times_table(void)
 
 	int c;
 
+	int d;
+	int array[10][10];
 	for (a = 0; a < 10; a++)
 	{
 		for (b = 0; b < 10; b++)
 		{
-			c = a * b;
-			printf("%d%s", c, b < 9 ? ", " : "");
-			if (c < 10)
-				putchar(' ');
+			array[a][b] = a * b;
+		}
+	}
+	for (d = 0; d < 10; d++)
+	{
+		for (c = 0; c < 10; c++)
+		{
+			if (c < 9)
+				printf("%d%s", array[d][c], array[d][c + 1] < 10 ? ",  " : ", ");
+			else
+				printf("%d", array[d][c]);
 		}
 		puts("");
 	}
