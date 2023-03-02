@@ -13,7 +13,7 @@ void jack_bauer(void)
 	{
 		for (b = 0; b < 60; b++)
 		{
-			if (a == 0)
+			if (a < 10)
 			{
 				putchar('0');
 			}
