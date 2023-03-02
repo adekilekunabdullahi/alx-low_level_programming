@@ -11,7 +11,7 @@ void sumOfMultiples(void)
 
 	for (i = 1; i < 1024; i++)
 	{
-		if ((1024 / i) == a[0] || (1024 / i) == a[1])
+		if ((i % a[0]) == 0 || (i % a[1]) == 0)
 			sum += i;
 	}
 	printf("%d\n", sum);
