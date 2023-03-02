@@ -13,6 +13,7 @@ void times_table(void)
 
 	int d;
 	int array[10][10];
+
 	for (a = 0; a < 10; a++)
 	{
 		for (b = 0; b < 10; b++)
