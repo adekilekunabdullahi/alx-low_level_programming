@@ -1,5 +1,8 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * times_table - a function to print 9 times table starting from zero
+ */
 void times_table(void)
 {
 	int a;
@@ -17,5 +20,4 @@ void times_table(void)
 		}
 		puts("");
 	}
-	puts("");;
 }
