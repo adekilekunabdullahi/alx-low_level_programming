@@ -12,24 +12,23 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *good;
 
-	if (!ptr)
-	{
-		ptr = malloc(new_size);
-		return (ptr);
-	}
 	if (new_size == old_size)
 		return (ptr);
 	if (!new_size && ptr)
 	{
 		free(ptr);
 	}
+	if (!ptr)
+	{
+		good = malloc(new_size);
+	}
 	if (new_size > old_size)
 	{
 		good = malloc(new_size);
 		if (!good)
-			return NULL;
-		good = memcpy(good, ptr, old_size < new_size ? old_size : new_size);
-		free (ptr);
+			return (NULL);
+		memcpy(good, ptr, old_size);
+		free(ptr);
 	}
 	return (good);
 }
