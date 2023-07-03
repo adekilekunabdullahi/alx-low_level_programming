@@ -1,2 +1,1 @@
-This directory contain projects on C language 
-ghh
+# This directory contain projects on C language
