@@ -5,14 +5,12 @@ NAME = school
 all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CC) -o $(NAME) $(OBJ)
-main.o : main.c m.h
-	$(CC) -c -o main.o main.c
-school.o : school.c m.h
-	$(CC) -c -o school.o school.c
+%.o: %.c
+	$(CC) -c $< -o $@
 clean :
 	rm -f $(NAME) $(wildcard *.swp) $(wildcard *~)
 oclean :
 	rm -f $(OBJ)
 fclean :
 	rm -f $(NAME) $(OBJ) $(wildcard *.swp) $(wildcard *~)
-re: $(SRC)
+re: fclean all
