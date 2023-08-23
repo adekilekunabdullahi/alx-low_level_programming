@@ -8,7 +8,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CC) -o $(NAME) $(OBJ)
 %.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 clean :
 	$(RM) $(NAME) *.swp *~
 oclean :
