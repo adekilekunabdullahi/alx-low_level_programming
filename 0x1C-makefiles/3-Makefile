@@ -9,9 +9,8 @@ $(NAME) : $(OBJ)
 %.o: %.c
 	$(CC) -c $< -o $@
 clean :
-	RM $(NAME) $(wildcard *.swp) $(wildcard *~)
+	RM $(NAME) *.swp *~
 oclean :
 	RM $(OBJ)
-fclean :
-	RM $(NAME) $(OBJ) $(wildcard *.swp) $(wildcard *~)
+fclean : clean oclean
 re: fclean all
